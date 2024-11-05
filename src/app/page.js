@@ -24,7 +24,7 @@ const InputField = ({ label, name, type = "text", value, onChange, error, option
       <label>{label}</label>
       {type === "select" ? (
         <select name={name} value={value} onChange={onChange} className={error ? styles.customSelectError : styles.customSelect}>
-          <option>{label}</option>
+          <option>{label === "Страна-производитель (копродукция)" ? "Cтрана" : label}</option>
           {options.map((option, index) => (
             <option key={index} value={option}>{option}</option>
           ))}
